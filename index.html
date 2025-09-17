@@ -1,27 +1,132 @@
-<!doctype html><html lang="ja"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SwitchVoiceNavi</title>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SwitchVoiceNavi | ブラウザで動く音声ナビ</title>
+  <meta name="description" content="SwitchVoiceNaviはブラウザで動く無料の音声カーナビ。MapLibre × OpenRouteService。二段階音声案内、リルート、HUD、料金回避に対応。iOS/AndroidのTTSを利用。">
+  <link rel="canonical" href="https://lamb5656.github.io/">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#0f172a">
 
-<!-- ★ AdSense が指示する「サイト確認コード」をそのまま貼る（client=ca-pub-XXXX） -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9492165781041714"
-        crossorigin="anonymous"></script>
-<style>
-  body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; margin:0; background:#f8fafc; color:#0f172a}
-  .wrap{max-width:880px;margin:40px auto;padding:0 16px}
-  .card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px;box-shadow:0 6px 18px rgba(15,23,42,.06)}
-  .btn{display:inline-block;margin-top:10px;padding:.6rem 1rem;border-radius:999px;background:#1b6ef3;color:#fff;text-decoration:none}
-  .links a{margin-right:12px}
-</style>
-</head><body>
-  <main class="wrap">
-    <div class="card">
-      <h1>SwitchVoiceNavi</h1>
-      <p>ブラウザで動く音声ナビです（端末のTTSを利用）にゃ。</p>
-      <div class="links">
-        <a class="btn" href="https://lamb5656.github.io/navi-app/browser-navi/" rel="noopener">ナビを開く</a>
-        <a href="https://lamb5656.github.io/navi-app/browser-navi/howto.html" rel="noopener">設定方法</a>
-        <a href="https://github.com/lamb5656/navi-app" rel="noopener">Android用アプリケーション(ダウンロードと設定方法)</a>
-      </div>
+  <!-- Google AdSense site verification / loader -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9492165781041714" crossorigin="anonymous"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="SwitchVoiceNavi">
+  <meta property="og:title" content="SwitchVoiceNavi | ブラウザで動く音声ナビ">
+  <meta property="og:description" content="MapLibre × OpenRouteService。二段階音声案内、リルート、HUD、料金回避に対応。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lamb5656.github.io/">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SwitchVoiceNavi",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+    "url": "https://lamb5656.github.io/navi-app/browser-navi/",
+    "publisher": { "@type": "Organization", "name": "SwitchVoiceNavi Project" },
+    "featureList": [
+      "Turn-by-turn voice guidance",
+      "Re-routing when off course",
+      "Two-phase prompts (300m/near)",
+      "Toll road avoidance (ORS)",
+      "HUD with remaining distance and ETA"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://lamb5656.github.io" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/">SwitchVoiceNavi</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="https://lamb5656.github.io/navi-app/browser-navi/" rel="noopener noreferrer">ナビを開く</a>
+        <a href="https://lamb5656.github.io/navi-app/browser-navi/howto.html" rel="noopener noreferrer">設定方法</a>
+        <a href="./privacy.html" rel="noopener noreferrer">プライバシーポリシー</a>
+        <a href="./contact.html" rel="noopener noreferrer">お問い合わせ</a>
+      </nav>
     </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title">ブラウザで動く音声ナビ</h1>
+        <p class="hero-lead">インストール不要。スマホの音声合成(TTS)で<span class="nowrap">Turn‑by‑Turn</span>案内。MapLibre × OpenRouteService による高品質ルーティング。</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://lamb5656.github.io/navi-app/browser-navi/" rel="noopener noreferrer">ナビを開く</a>
+          <a class="btn btn-secondary" href="https://lamb5656.github.io/navi-app/browser-navi/howto.html" rel="noopener noreferrer">使い方を見る</a>
+        </div>
+        <p class="note">※ 音声は端末のTTSを使用します。初回はユーザー操作後に再生される場合があります。</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>主な特長</h2>
+        <ul class="feature-grid" role="list">
+          <li class="feature">
+            <h3>二段階音声案内</h3>
+            <p>約300m手前の予告と直前案内で安心。到着時は自動停止を予定。</p>
+          </li>
+          <li class="feature">
+            <h3>自動リルート</h3>
+            <p>コースを外れても自動で再検索。常に最適ルートへ。</p>
+          </li>
+          <li class="feature">
+            <h3>HUDで残距離/ETA</h3>
+            <p>現在地に自動ズーム。残距離と到着予想時刻をわかりやすく表示。</p>
+          </li>
+          <li class="feature">
+            <h3>有料道路回避</h3>
+            <p>OpenRouteService使用時に回避設定が可能。OSRMフォールバック時は非対応。</p>
+          </li>
+          <li class="feature">
+            <h3>日本語住所検索</h3>
+            <p>Nominatimで日本語検索に対応。候補からすぐに目的地設定。</p>
+          </li>
+          <li class="feature">
+            <h3>無料・登録不要</h3>
+            <p>ブラウザで今すぐ利用可能。インストールは不要です。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="links">
+      <div class="container">
+        <h2>リンク</h2>
+        <ul class="link-list" role="list">
+          <li><a href="https://github.com/lamb5656/navi-app" rel="noopener noreferrer">GitHubリポジトリ</a></li>
+          <li><a href="https://ors-proxy.lamb565.workers.dev/health" rel="noopener noreferrer">ルーティング用プロキシの稼働状況</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="notes">
+      <div class="container">
+        <h2>ご利用にあたって</h2>
+        <p>本サービスはOpenStreetMapのデータと外部API（OpenRouteService/OSRMなど）を利用しています。交通状況や標識に従い、安全運転でご利用ください。</p>
+      </div>
+    </section>
   </main>
-</body></html>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <small>© 2025 SwitchVoiceNavi</small>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="./privacy.html" rel="noopener noreferrer">プライバシーポリシー</a>
+        <a href="./contact.html" rel="noopener noreferrer">お問い合わせ</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
