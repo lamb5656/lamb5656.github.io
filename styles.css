@@ -150,3 +150,21 @@ a:hover { text-decoration: underline; }
   .nav a { margin-left: 12px; }
   .feature-grid { grid-template-columns: 1fr; }
 }
+
+/* --- Optional polish --- */
+
+/* フォーカスリングをはっきり */
+a:focus, button:focus, .btn:focus {
+  outline: 3px solid rgba(27,110,243,.35);
+  outline-offset: 2px;
+}
+
+/* ボタンの押し心地を少し良くする */
+.btn { transition: transform .04s ease, filter .15s ease, background .15s ease; }
+.btn:active { transform: translateY(1px); }
+
+/* ヒーローの余白をすこし広く（モバイルで読みやすく） */
+@media (max-width: 480px) {
+  .hero { padding: 48px 0 20px; }
+  .hero-cta { gap: 10px; }
+}
