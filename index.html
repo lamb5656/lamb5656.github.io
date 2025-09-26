@@ -4,22 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SwitchVoiceNavi | ブラウザで使える音声ナビ</title>
-  <meta name="description" content="インストール不要。スマホの音声で案内する無料のカーナビ。MapLibre × OpenRouteService。リルート、二段階案内、HUD、料金回避に対応。">
+  <meta name="description" content="ブラウザだけで使える無料の音声ナビ。MapLibre × OpenRouteServiceにより、二段階音声案内・リルート・HUD・料金回避に対応。使い方、設計の考え方、FAQ、更新履歴までわかりやすく紹介します。">
   <link rel="canonical" href="https://lamb5656.github.io/">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#0f172a">
 
-  <!-- Google AdSense -->
+  <!-- （審査後に有効化）読み物ページでのみ広告を出す方針。TOPは情報量が多いので残しても可 -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9492165781041714" crossorigin="anonymous"></script>
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="SwitchVoiceNavi">
   <meta property="og:title" content="SwitchVoiceNavi | ブラウザで使える音声ナビ">
-  <meta property="og:description" content="MapLibre × OpenRouteService。二段階音声案内、リルート、HUD、料金回避に対応。">
+  <meta property="og:description" content="インストール不要の無料ナビ。二段階音声案内、リルート、HUD、料金回避に対応。使い方や更新履歴も掲載。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lamb5656.github.io/">
 
-  <!-- Structured Data -->
+  <!-- Structured Data: Software + FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,16 +40,24 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="/">SwitchVoiceNavi</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="./">TOP</a>
+        <a href="https://lamb5656.github.io/navi-app/browser-navi/howto.html" rel="noopener noreferrer">設定方法</a>
+        <a href="./terms.html">利用規約</a>
+        <a href="./privacy.html">プライバシー</a>
+        <a href="./contact.html">お問い合わせ</a>
+      </nav>
     </div>
   </header>
 
   <main id="content">
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
         <h1 class="hero-title">インストールいらずの音声ナビ</h1>
         <p class="hero-lead">
-          ブラウザを開くだけで使える無料のナビ。コースアウト時は自動でリルート、
-          残り距離と到着時刻をすぐ確認できます。
+          ブラウザを開くだけで使える無料のナビ。コースアウト時は自動でリルート。
+          二段階の音声案内で交差点の見落としを減らし、残り距離と到着時刻をいつでも確認できます。
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="https://lamb5656.github.io/navi-app/browser-navi/" target="_blank" rel="noopener noreferrer">今すぐ使う</a>
@@ -59,10 +67,83 @@
       </div>
     </section>
 
+    <!-- About -->
+    <section class="container" style="padding:28px 0;">
+      <h2>SwitchVoiceNaviとは</h2>
+      <p>SwitchVoiceNaviは、<strong>アプリのインストール不要</strong>で使えるウェブベースの音声ナビゲーションです。地図は OpenStreetMap、描画は MapLibre、経路探索は OpenRouteService / OSRM などの外部APIを組み合わせ、日常の移動をサクッと支援します。スマートフォンのブラウザだけで動くため、容量を圧迫せず手軽に始められます。</p>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="container">
+        <h2>主な特徴</h2>
+        <ul class="feature-grid">
+          <li class="feature"><h3>二段階の音声案内</h3><p>曲がる少し前と直前の2回、落ち着いて進路変更できます。</p></li>
+          <li class="feature"><h3>自動リルート</h3><p>コースアウトしても即再検索。手動操作は最小限です。</p></li>
+          <li class="feature"><h3>HUD表示</h3><p>進行方向や次の案内を簡潔に表示。夜間でも見やすい配色。</p></li>
+          <li class="feature"><h3>料金回避</h3><p>有料道路を避けたいときにワンタップで切り替え可能。</p></li>
+          <li class="feature"><h3>軽快に動作</h3><p>ウェブ技術のみでサクサク。端末にアプリを追加しません。</p></li>
+          <li class="feature"><h3>無料で利用可能</h3><p>基本機能はずっと無料。誰でもすぐに使い始められます。</p></li>
+          <li class="feature"><h3>プライバシーに配慮</h3><p>必要最小限のアクセス情報のみ。詳細はプライバシーポリシーへ。</p></li>
+          <li class="feature"><h3>オープンデータ尊重</h3><p>OpenStreetMapのコミュニティに感謝しつつ改良を継続。</p></li>
+          <li class="feature"><h3>ブラウザで完結</h3><p>アップデートは自動反映。常に最新の状態で使えます。</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How to -->
+    <section class="links">
+      <div class="container">
+        <h2>使い方（3ステップ）</h2>
+        <ol>
+          <li><strong>ブラウザで開く：</strong> 上の「今すぐ使う」をタップ。</li>
+          <li><strong>目的地を入力：</strong> 施設名・住所で検索して選択。</li>
+          <li><strong>案内を開始：</strong> 音量と画面を確認し、安全運転で出発。</li>
+        </ol>
+        <p class="note">詳細は<a href="https://lamb5656.github.io/navi-app/browser-navi/howto.html" target="_blank" rel="noopener noreferrer">設定方法</a>をご覧ください。</p>
+      </div>
+    </section>
+
+    <!-- Notes / Safety -->
     <section class="notes">
       <div class="container">
-        <h2>ご利用前に</h2>
-        <p>このサービスは OpenStreetMap のデータと外部API（OpenRouteService / OSRM など）を利用しています。実際の交通規制や標識に従い、安全運転でお使いください。</p>
+        <h2>安全にお使いいただくために</h2>
+        <p>実際の標識・交通規制・道路状況を必ず優先してください。運転中の操作は避け、同乗者に依頼するか安全な場所に停止してから行ってください。外部APIや地図データの都合により、最短ルートや最新情報を常に保証するものではありません。</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="features">
+      <div class="container">
+        <h2>よくある質問</h2>
+        <ul class="link-list">
+          <li><strong>Q.</strong> アプリのインストールは必要ですか？<br> <strong>A.</strong> 不要です。ブラウザで開くだけで使えます。</li>
+          <li><strong>Q.</strong> 音声が鳴らないときは？<br> <strong>A.</strong> 端末の音量とミュート設定をご確認ください。初回のみ、ユーザー操作の後に音声が許可される場合があります。</li>
+          <li><strong>Q.</strong> 有料道路を避けたい。<br> <strong>A.</strong> 画面の料金回避設定をオンにしてください。</li>
+          <li><strong>Q.</strong> 位置がずれる。<br> <strong>A.</strong> 屋内・高架下・トンネルでは誤差が大きくなることがあります。しばらく走行すると補正されます。</li>
+          <li><strong>Q.</strong> データは収集していますか？<br> <strong>A.</strong> 品質向上や不具合解析のためのアクセス情報を必要最小限で扱います。詳細はプライバシーポリシーをご確認ください。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Release Notes -->
+    <section class="links">
+      <div class="container">
+        <h2>更新履歴</h2>
+        <ul class="link-list">
+          <li><strong>2025-04:</strong> HUD表示の視認性を改善、トースト重なりを調整、検索バリデーションを強化。</li>
+          <li><strong>2025-03:</strong> リルートの安定性を向上、案内の遅延を短縮。</li>
+          <li><strong>2025-02:</strong> 二段階音声案内をデフォルトに、料金回避オプションを追加。</li>
+        </ul>
+        <p class="note">不具合やご要望は <a href="./contact.html">お問い合わせ</a> からお知らせください。</p>
+      </div>
+    </section>
+
+    <!-- Policy Summary -->
+    <section class="features">
+      <div class="container">
+        <h2>プライバシーと広告について</h2>
+        <p>当サイトは Google AdSense を利用する場合があります。広告のパーソナライズは広告設定から無効化できます。技術的な詳細や取扱い方針は<a href="./privacy.html">プライバシーポリシー</a>をご覧ください。</p>
       </div>
     </section>
   </main>
@@ -71,10 +152,24 @@
     <div class="container footer-inner">
       <small>© 2025 SwitchVoiceNavi</small>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="./privacy.html" rel="noopener noreferrer">プライバシー</a>
-        <a href="./contact.html" rel="noopener noreferrer">お問い合わせ</a>
+        <a href="./terms.html">利用規約</a>
+        <a href="./privacy.html">プライバシー</a>
+        <a href="./contact.html">お問い合わせ</a>
       </nav>
     </div>
   </footer>
+
+  <!-- FAQPage JSON-LD（検索エンジン向けに要約） -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"アプリのインストールは必要ですか？","acceptedAnswer":{"@type":"Answer","text":"不要です。ブラウザで開くだけで使えます。"}},
+      {"@type":"Question","name":"音声が鳴らないときは？","acceptedAnswer":{"@type":"Answer","text":"端末の音量とミュート設定をご確認ください。初回は操作後に音声が許可される場合があります。"}},
+      {"@type":"Question","name":"有料道路を避けたい","acceptedAnswer":{"@type":"Answer","text":"画面の料金回避設定をオンにしてください。"}}
+    ]
+  }
+  </script>
 </body>
 </html>
