@@ -1,0 +1,21 @@
+# robots.txt for https://lamb5656.github.io/
+
+User-agent: *
+# Block functional app surfaces (navigation UI etc.)
+Disallow: /navi-app/browser-navi/
+# Re-allow documentation pages under that path
+Allow: /navi-app/browser-navi/howto.html
+
+# Do NOT block JS/CSS/images (rendering needs them)
+
+Sitemap: https://lamb5656.github.io/sitemap.xml
+
+
+# Ad-related crawlers (same policy, explicit section)
+User-agent: AdsBot-Google
+Disallow: /navi-app/browser-navi/
+Allow: /navi-app/browser-navi/howto.html
+
+User-agent: AdsBot-Google-Mobile
+Disallow: /navi-app/browser-navi/
+Allow: /navi-app/browser-navi/howto.html
